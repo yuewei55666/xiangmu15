@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css" />
+		<style>
+			*{
+				margin: 0;padding: 0;
+			}
+			.box{
+				width: 450px;
+				height: 400px;
+				background: #525A5A;
+			}
+			.content{
+				width: 90%;
+				margin: 0 auto;
+			}
+			.box h3{
+				padding: 20px 0;
+				color: white;
+			}
+			.p1{
+				color: white;
+				margin: 5px 0;
+			}
+			.clearfix:after{
+				display: block;
+				clear: both;
+				content: "";
+			}
+			.p1 .span1{
+				float: left;
+			}
+			.p1 .span2{
+				float: right;
+			}
+			.xiala1{
+				width: 100%;
+				height: 50px;
+				margin: 5px 0;
+			}
+			.p2{
+				color: white;
+				margin: 5px 0;
+				z-index: 1;
+			}
+			.xiala2{
+				width: 100%;
+				height: 50px;
+				margin: 5px 0;
+			}
+			.btn{
+				width: 100%;
+				height: 50px;
+				background: #0094EF;
+				color: white;
+				border: none;
+				margin: 10px 0;
+			}
+			.one,.two{
+				width: 100%;
+				position: relative;
+			}
+			.ul1{
+				width: 405px;
+				list-style: none;
+				background: white;
+				z-index: 2;
+				position: absolute;
+				left: 23px;
+				top: 146px;
+				border-top: 1px solid #EEEEEE;
+				display: none;
+			}
+			.ul2{
+				width: 405px;
+				list-style: none;
+				background: white;
+				z-index: 2;
+				position: absolute;
+				left: 23px;
+				top: 227px;
+				border-top: 1px solid #EEEEEE;
+				display: none;
+			}
+			.ul1 li:hover{
+				background: #00B0DC;
+			}
+			.ul2 li:hover{
+				background: #00B0DC;
+			}
+			ul>li{
+				width: 100%;
+				padding: 5px 0;
+			}
+
+			.pp1,.pp2{
+				width: 90%;
+				float: left;
+				height: 50px;
+				background: white;
+				line-height: 50px;
+				border-right: 1px solid #EEEEEE;
+				box-sizing: border-box;
+				
+			}
+			.sp1{
+				display: inline-block;
+				float: left;
+				padding-left: 5px;
+			}
+			.sp2{
+				display: inline-block;
+				float: right;
+				padding-right: 5px;
+			}
+			.ss1,.ss2{
+				width: 10%;
+				float: right;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				background: white			
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="content">
+				<h3>快速搜索消费货款</h3>
+				<p class="p1 clearfix"><span class="span1">货款金额</span><span class="span2">不足一万可用小数表示</span></p>
+
+				<div class="one  clearfix">
+					<p class="pp1">
+						<span class="sp1">30</span>
+						<span class="sp2">万元</span>
+					</p>
+					<div class="ss1">
+						<span class="fa fa-angle-down"></span>
+					</div>
+				</div>
+					<ul class="ul1">
+						<li><span>5</span><span>万元</span></li>
+						<li><span>10</span><span>万元</span></li>
+						<li>15万元</li>
+						<li>20万元</li>
+						<li>25万元</li>
+						<li>30万元</li>
+					</ul>
+					<p class="p2">货款期限：</p>
+				<div class="two  clearfix">
+					<p class="pp2">
+						<span class="sp1">30</span>
+						<span class="sp2">万元</span>
+					</p>
+					<div class="ss2">
+						<span class="fa fa-angle-down"></span>
+					</div>
+				</div>
+					<ul class="ul2">
+						<li><span>5</span><span>万元</span></li>
+						<li><span>10</span><span>万元</span></li>
+						<li>15万元</li>
+						<li>20万元</li>
+						<li>25万元</li>
+						<li>30万元</li>
+					</ul>
+					<input type="button" value="搜索一下" class="btn"/>
+					<p class="p3">9164种信货产品 2000家银行 1403家小货公司</p>
+			</div>
+			</div>
+			
+			
+		</div>
+		<script src="js/jquery-3.1.1.min.js"></script>
+		<script>
+			$(function(){
+				$(".ss1").click(function(){
+					$(".ul1").toggle()
+				})
+				$(".ul1>li").click(function(){					
+					txt=$(this).html();
+					$(".pp1").html(txt)
+					$(".ul1").toggle()
+				})
+				$(".ss2").click(function(){
+					$(".ul2").toggle()
+				})
+				$(".ul2>li").click(function(){
+					text=$(this).html();
+					$(".pp2").html(txt);
+					$(".ul2").toggle()
+				})
+				
+			})
+		</script>
+	</body>
+</html>
